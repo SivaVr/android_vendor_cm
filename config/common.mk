@@ -125,8 +125,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     LockClock \
     ThemeInterfacer \
-    Trebuchet \
-    Updater \
+    Trebuchet \    
     WallpaperPicker \
     WeatherProvider
 
