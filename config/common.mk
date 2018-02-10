@@ -126,7 +126,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     ThemeInterfacer \
     Trebuchet \
-    Updater \
     WallpaperPicker \
     WeatherProvider
 
@@ -322,9 +321,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cm.version=$(LINEAGE_VERSION) \
     ro.cm.releasetype=$(CM_BUILDTYPE) \
     ro.cm.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(LINEAGE_VERSION) \   
-    ro.cmlegal.url=https://lineageos.org/legal \
-    ro.lineageoms.version=$(LINEAGE_VERSION)
+    ro.modversion=$(LINEAGE_VERSION) \
+    ro.cmlegal.url=https://lineageos.org/legal
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/cm/build/target/product/security/lineage
@@ -356,6 +354,7 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
 endif
 endif
 
+CM_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(CM_BUILD) 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cm.display.version=$(CM_DISPLAY_VERSION)
 
