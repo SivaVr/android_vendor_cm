@@ -80,6 +80,9 @@ PRODUCT_COPY_FILES += \
 # Include CM audio files
 include vendor/cm/config/cm_audio.mk
 
+# Theme engine
+include vendor/cm/config/themes_common.mk
+
 ifneq ($(TARGET_DISABLE_CMSDK), true)
 # CMSDK
 include vendor/cm/config/cmsdk_common.mk
@@ -353,7 +356,7 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
     endif
 endif
 endif
-
+TARGET_VENDOR_RELEASE_BUILD_ID := Lineage
 CM_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(CM_BUILD) 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cm.display.version=$(CM_DISPLAY_VERSION)
